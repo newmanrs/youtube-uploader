@@ -38,6 +38,7 @@ def default_upload_params():
         "embeddable": True,
         "license": "creativeCommon",
         "stats_viewable": True,
+        "privacy_status": "public",
     }
 
 
@@ -52,6 +53,7 @@ def upload(
     embeddable,
     license,
     stats_viewable,
+    privacy_status
 ):
 
     channel = Channel()
@@ -70,7 +72,7 @@ def upload(
     # setting status
     video.set_embeddable(embeddable)
     video.set_license(license)
-    video.set_privacy_status("public")
+    video.set_privacy_status(privacy_status)
     video.set_public_stats_viewable(stats_viewable)
 
     # setting thumbnail
